@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-catofriends/static/css/main.6da34a49.chunk.css",
+    "main.js": "/react-catofriends/static/js/main.4e3f8a08.chunk.js",
+    "main.js.map": "/react-catofriends/static/js/main.4e3f8a08.chunk.js.map",
+    "runtime-main.js": "/react-catofriends/static/js/runtime-main.d02b3894.js",
+    "runtime-main.js.map": "/react-catofriends/static/js/runtime-main.d02b3894.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/react-catofriends/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.19331f0f.chunk.js": "/react-catofriends/static/js/2.19331f0f.chunk.js",
+    "static/js/2.19331f0f.chunk.js.map": "/react-catofriends/static/js/2.19331f0f.chunk.js.map",
+    "index.html": "/react-catofriends/index.html",
+    "precache-manifest.999f05e6519fbaad0d8fba24e2f49a4f.js": "/react-catofriends/precache-manifest.999f05e6519fbaad0d8fba24e2f49a4f.js",
+    "service-worker.js": "/react-catofriends/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/react-catofriends/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.6da34a49.chunk.css.map": "/react-catofriends/static/css/main.6da34a49.chunk.css.map",
+    "static/js/2.19331f0f.chunk.js.LICENSE.txt": "/react-catofriends/static/js/2.19331f0f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react-catofriends/static/media/Retro Computer.b990a711.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d02b3894.js",
+    "static/css/2.3c03f26f.chunk.css",
+    "static/js/2.19331f0f.chunk.js",
+    "static/css/main.6da34a49.chunk.css",
+    "static/js/main.4e3f8a08.chunk.js"
+  ]
+}
