@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import SearchBox from './SearchBox';
-import Scroll from './Scroll';
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll';
 import './App.css';
-import { CATS } from './cats';
+
 
 class App extends Component {
     constructor() {
@@ -12,7 +12,6 @@ class App extends Component {
             cats: [],
             searchfield: ''
         }
-
     }
 
     componentDidMount() {
@@ -26,13 +25,13 @@ class App extends Component {
     }
 
     render(){
-        const filteredCats = this.state.cats.filter(cat => {
-            return cat.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const { cats, searchfield } = this.state;
+        const filteredCats = cats.filter(cat => {
+            return cat.name.toLowerCase().includes(searchfield.toLowerCase());
         });
-        if (this.state.cats.length === 0) {
-            return <h1>Loading</h1>
-        } else {
-            return (
+        return !cats.length ?
+             <h1>Loading</h1> :
+            (
                 <div className='tc'>
                     <h1 className='mb1' style={{fontSize: '5rem'}}>CatoFriends</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
@@ -40,8 +39,7 @@ class App extends Component {
                         <CardList cats={filteredCats} />
                     </Scroll>
                 </div>
-            );
-        }
+            );        
     }
     
 }

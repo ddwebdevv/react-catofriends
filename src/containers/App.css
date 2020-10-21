@@ -2,7 +2,7 @@
     font-family: 'Retro Computer Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Retro Computer Regular'), url('Retro Computer.woff') format('woff');
+    src: local('Retro Computer Regular'), url('../Retro\ Computer.woff') format('woff');
 }
 
 h1 {
