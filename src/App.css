@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Retro Computer Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Retro Computer Regular'), url('Retro Computer.woff') format('woff');
+}
+
+h1 {
+    font-size: 5rem;
+    /* font-family: 'Retro Computer Regular'; */
+    /* font-weight: 300; */
+    color: rgb(168, 66, 7);    
+    /* letter-spacing: 5px; */
+}
