@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "871ea1981b65593ee0f4501248d62a02",
+    "revision": "49c8b67433072e9ebbef9dbf4c2dcbca",
     "url": "/react-catofriends/index.html"
   },
   {
