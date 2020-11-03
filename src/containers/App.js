@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -6,44 +6,51 @@ import ErrorBoundry from '../components/ErrorBoundry'
 import './App.css';
 
 
-class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            cats: [],
-            searchfield: ''
-        }
-    }
+function App() {
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         cats: [],
+    //         searchfield: ''
+    //     }
+    // }
 
-    componentDidMount() {
+    const [cats, setCats] = useState([]);
+    const [searchfield, setSearchfield] = useState('');
+
+    // componentDidMount() {
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //     .then(response => response.json())
+    //     .then(users => this.setState({cats: users}));
+    // }
+
+    useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(users => this.setState({cats: users}));
-    }
+        .then(users => setCats(users));
+    },[]);
 
-    onSearchChange = (e) => {
-        this.setState({ searchfield: e.target.value});        
-    }
+    const onSearchChange = (e) => {
+        setSearchfield(e.target.value);        
+    };
 
-    render(){
-        const { cats, searchfield } = this.state;
-        const filteredCats = cats.filter(cat => {
-            return cat.name.toLowerCase().includes(searchfield.toLowerCase());
-        });
-        return !cats.length ?
-             <h1>Loading</h1> :
-            (
-                <div className='tc'>
-                    <h1 className='mb1' style={{fontSize: '5rem'}}>CatoFriends</h1>
-                    <SearchBox searchChange={this.onSearchChange}/>
-                    <Scroll >
-                        <ErrorBoundry>
-                            <CardList cats={filteredCats} />
-                        </ErrorBoundry>
-                    </Scroll>
-                </div>
-            );        
-    }
+    const filteredCats = cats.filter(cat => {
+        return cat.name.toLowerCase().includes(searchfield.toLowerCase());
+    });
+    return !cats.length ?
+            <h1>Loading</h1> :
+        (
+            <div className='tc'>
+                <h1 className='mb1' style={{fontSize: '5rem'}}>CatoFriends</h1>
+                <SearchBox searchChange={onSearchChange}/>
+                <Scroll >
+                    <ErrorBoundry>
+                        <CardList cats={filteredCats} />
+                    </ErrorBoundry>
+                </Scroll>
+            </div>
+        );        
+
     
 }
 
